@@ -22,11 +22,28 @@ class WeatherAlertTests: XCTestCase {
         super.tearDown()
     }
     
-    func testActivityReturnsCondition() {
+    func testActivityReturnsSingleCondition() {
         let activity = Activity(title: "activity", conditions: [Condition(name: "first", ideal: 10, max: 20, min: 0)]);
         let condition = activity.getCondition("first");
         let title = activity.getTitle();
         XCTAssert(title == "activity");
+        XCTAssert(condition.getName() == "first");
         XCTAssert(condition.getIdeal() == 10);
+        XCTAssert(condition.getMax() == 20);
+        XCTAssert(condition.getMin() == 0);
+    }
+    
+    func testActivityReturnsMultipleConditions() {
+        let activity = Activity(title: "activity", conditions: [Condition(name: "first", ideal: 10, max: 20, min: 0), Condition(name: "second", ideal:50, max:100, min:0)]);
+        let condition1 = activity.getCondition("first");
+        let condition2 = activity.getCondition("second");
+        XCTAssert(condition1.getName() == "first");
+        XCTAssert(condition1.getIdeal() == 10);
+        XCTAssert(condition1.getMax() == 20);
+        XCTAssert(condition1.getMin() == 0);
+        XCTAssert(condition2.getName() == "second");
+        XCTAssert(condition2.getIdeal() == 50);
+        XCTAssert(condition2.getMax() == 100);
+        XCTAssert(condition2.getMin() == 0);
     }
 }
