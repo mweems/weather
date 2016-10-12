@@ -13,18 +13,12 @@
 		C9FA52981DAE89A300049A69 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C9FA52971DAE89A300049A69 /* Assets.xcassets */; };
 		C9FA529B1DAE89A300049A69 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C9FA52991DAE89A300049A69 /* LaunchScreen.storyboard */; };
 		C9FA52A61DAE89A300049A69 /* WeatherAlertTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9FA52A51DAE89A300049A69 /* WeatherAlertTests.swift */; };
-		C9FA52B11DAE89A300049A69 /* WeatherAlertUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9FA52B01DAE89A300049A69 /* WeatherAlertUITests.swift */; };
+		C9FA52BF1DAE8BBA00049A69 /* ConditionChecker.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9FA52BE1DAE8BBA00049A69 /* ConditionChecker.swift */; };
+		C9FA52C11DAE95C200049A69 /* Activity.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9FA52C01DAE95C200049A69 /* Activity.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
 		C9FA52A21DAE89A300049A69 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = C9FA52851DAE89A300049A69 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = C9FA528C1DAE89A300049A69;
-			remoteInfo = WeatherAlert;
-		};
-		C9FA52AD1DAE89A300049A69 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = C9FA52851DAE89A300049A69 /* Project object */;
 			proxyType = 1;
@@ -44,9 +38,8 @@
 		C9FA52A11DAE89A300049A69 /* WeatherAlertTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WeatherAlertTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C9FA52A51DAE89A300049A69 /* WeatherAlertTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherAlertTests.swift; sourceTree = "<group>"; };
 		C9FA52A71DAE89A300049A69 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		C9FA52AC1DAE89A300049A69 /* WeatherAlertUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WeatherAlertUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		C9FA52B01DAE89A300049A69 /* WeatherAlertUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherAlertUITests.swift; sourceTree = "<group>"; };
-		C9FA52B21DAE89A300049A69 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C9FA52BE1DAE8BBA00049A69 /* ConditionChecker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConditionChecker.swift; sourceTree = "<group>"; };
+		C9FA52C01DAE95C200049A69 /* Activity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Activity.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,13 +57,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		C9FA52A91DAE89A300049A69 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -79,7 +65,6 @@
 			children = (
 				C9FA528F1DAE89A300049A69 /* WeatherAlert */,
 				C9FA52A41DAE89A300049A69 /* WeatherAlertTests */,
-				C9FA52AF1DAE89A300049A69 /* WeatherAlertUITests */,
 				C9FA528E1DAE89A300049A69 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -89,7 +74,6 @@
 			children = (
 				C9FA528D1DAE89A300049A69 /* WeatherAlert.app */,
 				C9FA52A11DAE89A300049A69 /* WeatherAlertTests.xctest */,
-				C9FA52AC1DAE89A300049A69 /* WeatherAlertUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -103,6 +87,8 @@
 				C9FA52971DAE89A300049A69 /* Assets.xcassets */,
 				C9FA52991DAE89A300049A69 /* LaunchScreen.storyboard */,
 				C9FA529C1DAE89A300049A69 /* Info.plist */,
+				C9FA52BE1DAE8BBA00049A69 /* ConditionChecker.swift */,
+				C9FA52C01DAE95C200049A69 /* Activity.swift */,
 			);
 			path = WeatherAlert;
 			sourceTree = "<group>";
@@ -114,15 +100,6 @@
 				C9FA52A71DAE89A300049A69 /* Info.plist */,
 			);
 			path = WeatherAlertTests;
-			sourceTree = "<group>";
-		};
-		C9FA52AF1DAE89A300049A69 /* WeatherAlertUITests */ = {
-			isa = PBXGroup;
-			children = (
-				C9FA52B01DAE89A300049A69 /* WeatherAlertUITests.swift */,
-				C9FA52B21DAE89A300049A69 /* Info.plist */,
-			);
-			path = WeatherAlertUITests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -163,24 +140,6 @@
 			productReference = C9FA52A11DAE89A300049A69 /* WeatherAlertTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		C9FA52AB1DAE89A300049A69 /* WeatherAlertUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = C9FA52BB1DAE89A300049A69 /* Build configuration list for PBXNativeTarget "WeatherAlertUITests" */;
-			buildPhases = (
-				C9FA52A81DAE89A300049A69 /* Sources */,
-				C9FA52A91DAE89A300049A69 /* Frameworks */,
-				C9FA52AA1DAE89A300049A69 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				C9FA52AE1DAE89A300049A69 /* PBXTargetDependency */,
-			);
-			name = WeatherAlertUITests;
-			productName = WeatherAlertUITests;
-			productReference = C9FA52AC1DAE89A300049A69 /* WeatherAlertUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -195,10 +154,6 @@
 						CreatedOnToolsVersion = 7.3.1;
 					};
 					C9FA52A01DAE89A300049A69 = {
-						CreatedOnToolsVersion = 7.3.1;
-						TestTargetID = C9FA528C1DAE89A300049A69;
-					};
-					C9FA52AB1DAE89A300049A69 = {
 						CreatedOnToolsVersion = 7.3.1;
 						TestTargetID = C9FA528C1DAE89A300049A69;
 					};
@@ -219,7 +174,6 @@
 			targets = (
 				C9FA528C1DAE89A300049A69 /* WeatherAlert */,
 				C9FA52A01DAE89A300049A69 /* WeatherAlertTests */,
-				C9FA52AB1DAE89A300049A69 /* WeatherAlertUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -242,13 +196,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		C9FA52AA1DAE89A300049A69 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -258,6 +205,8 @@
 			files = (
 				C9FA52931DAE89A300049A69 /* ViewController.swift in Sources */,
 				C9FA52911DAE89A300049A69 /* AppDelegate.swift in Sources */,
+				C9FA52C11DAE95C200049A69 /* Activity.swift in Sources */,
+				C9FA52BF1DAE8BBA00049A69 /* ConditionChecker.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -269,14 +218,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		C9FA52A81DAE89A300049A69 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				C9FA52B11DAE89A300049A69 /* WeatherAlertUITests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -284,11 +225,6 @@
 			isa = PBXTargetDependency;
 			target = C9FA528C1DAE89A300049A69 /* WeatherAlert */;
 			targetProxy = C9FA52A21DAE89A300049A69 /* PBXContainerItemProxy */;
-		};
-		C9FA52AE1DAE89A300049A69 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = C9FA528C1DAE89A300049A69 /* WeatherAlert */;
-			targetProxy = C9FA52AD1DAE89A300049A69 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -441,28 +377,6 @@
 			};
 			name = Release;
 		};
-		C9FA52BC1DAE89A300049A69 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				INFOPLIST_FILE = WeatherAlertUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = weemsical.WeatherAlertUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_TARGET_NAME = WeatherAlert;
-			};
-			name = Debug;
-		};
-		C9FA52BD1DAE89A300049A69 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				INFOPLIST_FILE = WeatherAlertUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = weemsical.WeatherAlertUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_TARGET_NAME = WeatherAlert;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -488,14 +402,6 @@
 			buildConfigurations = (
 				C9FA52B91DAE89A300049A69 /* Debug */,
 				C9FA52BA1DAE89A300049A69 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-		};
-		C9FA52BB1DAE89A300049A69 /* Build configuration list for PBXNativeTarget "WeatherAlertUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				C9FA52BC1DAE89A300049A69 /* Debug */,
-				C9FA52BD1DAE89A300049A69 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 		};

@@ -9,6 +9,7 @@
 import XCTest
 @testable import WeatherAlert
 
+
 class WeatherAlertTests: XCTestCase {
     
     override func setUp() {
@@ -21,16 +22,11 @@ class WeatherAlertTests: XCTestCase {
         super.tearDown()
     }
     
-    func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+    func testActivityReturnsCondition() {
+        let activity = Activity(title: "activity", conditions: [Condition(name: "first", ideal: 10, max: 20, min: 0)]);
+        let condition = activity.getCondition("first");
+        let title = activity.getTitle();
+        XCTAssert(title == "activity");
+        XCTAssert(condition.getIdeal() == 10);
     }
-    
-    func testPerformanceExample() {
-        // This is an example of a performance test case.
-        self.measureBlock {
-            // Put the code you want to measure the time of here.
-        }
-    }
-    
 }
