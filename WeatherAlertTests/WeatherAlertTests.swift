@@ -22,10 +22,59 @@ class WeatherAlertTests: XCTestCase {
         super.tearDown()
     }
     
+    func testConditionCheckerWhenIdeal() {
+        let cc = ConditionChecker(currentTemp:10);
+        let activity = Activity(title: "activity",
+                                conditions: [
+                                    Condition(name: "temp", ideal: 10, max: 20, min: 0)]);
+        let condition = activity.getCondition("temp");
+        let res = cc.checkTemp(condition);
+        XCTAssert(res == 10);
+    }
+    
+    func testConditionCheckerWhenGreaterThanIdeal() {
+        let cc = ConditionChecker(currentTemp:15);
+        let activity = Activity(title: "activity",
+                                conditions: [
+                                    Condition(name: "temp", ideal: 10, max: 20, min: 0)]);
+        let condition = activity.getCondition("temp");
+        let res = cc.checkTemp(condition);
+        XCTAssert(res == 5);
+        let cc1 = ConditionChecker(currentTemp:18);
+        let activity1 = Activity(title: "activity",
+                                conditions: [
+                                    Condition(name: "temp", ideal: 10, max: 20, min: 0)]);
+        let condition1 = activity1.getCondition("temp");
+        let res1 = cc1.checkTemp(condition1);
+        XCTAssert(res1 == 2);
+    }
+    
+    func testConditionCheckerWhenLessThanIdeal() {
+        let cc = ConditionChecker(currentTemp:5);
+        let activity = Activity(title: "activity",
+                                conditions: [
+                                    Condition(name: "temp", ideal: 10, max: 20, min: 0)]);
+        let condition = activity.getCondition("temp");
+        let res = cc.checkTemp(condition);
+        XCTAssert(res == 5);
+        let cc1 = ConditionChecker(currentTemp:2);
+        let activity1 = Activity(title: "activity",
+                                 conditions: [
+                                    Condition(name: "temp", ideal: 10, max: 20, min: 0)]);
+        let condition1 = activity1.getCondition("temp");
+        let res1 = cc1.checkTemp(condition1);
+        XCTAssert(res1 == 2);
+    }
+
+    
     func testActivityReturnsSingleCondition() {
-        let activity = Activity(title: "activity", conditions: [Condition(name: "first", ideal: 10, max: 20, min: 0)]);
+        let activity = Activity(title: "activity",
+                                conditions: [
+                                    Condition(name: "first", ideal: 10, max: 20, min: 0)]);
+        
         let condition = activity.getCondition("first");
         let title = activity.getTitle();
+        
         XCTAssert(title == "activity");
         XCTAssert(condition.getName() == "first");
         XCTAssert(condition.getIdeal() == 10);
@@ -34,9 +83,14 @@ class WeatherAlertTests: XCTestCase {
     }
     
     func testActivityReturnsMultipleConditions() {
-        let activity = Activity(title: "activity", conditions: [Condition(name: "first", ideal: 10, max: 20, min: 0), Condition(name: "second", ideal:50, max:100, min:0)]);
+        let activity = Activity(title: "activity",
+                                conditions: [
+                                    Condition(name: "first", ideal: 10, max: 20, min: 0),
+                                    Condition(name: "second", ideal:50, max:100, min:0)]);
+        
         let condition1 = activity.getCondition("first");
         let condition2 = activity.getCondition("second");
+        
         XCTAssert(condition1.getName() == "first");
         XCTAssert(condition1.getIdeal() == 10);
         XCTAssert(condition1.getMax() == 20);

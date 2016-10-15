@@ -12,9 +12,9 @@
 		C9FA52961DAE89A300049A69 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C9FA52941DAE89A300049A69 /* Main.storyboard */; };
 		C9FA52981DAE89A300049A69 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C9FA52971DAE89A300049A69 /* Assets.xcassets */; };
 		C9FA529B1DAE89A300049A69 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C9FA52991DAE89A300049A69 /* LaunchScreen.storyboard */; };
-		C9FA52A61DAE89A300049A69 /* WeatherAlertTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9FA52A51DAE89A300049A69 /* WeatherAlertTests.swift */; };
 		C9FA52BF1DAE8BBA00049A69 /* ConditionChecker.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9FA52BE1DAE8BBA00049A69 /* ConditionChecker.swift */; };
 		C9FA52C11DAE95C200049A69 /* Activity.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9FA52C01DAE95C200049A69 /* Activity.swift */; };
+		C9FA52C51DAEF70E00049A69 /* WeatherAlertTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9FA52A51DAE89A300049A69 /* WeatherAlertTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -214,7 +214,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C9FA52A61DAE89A300049A69 /* WeatherAlertTests.swift in Sources */,
+				C9FA52C51DAEF70E00049A69 /* WeatherAlertTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
