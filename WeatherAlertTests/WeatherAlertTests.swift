@@ -22,51 +22,6 @@ class WeatherAlertTests: XCTestCase {
         super.tearDown()
     }
     
-    func testConditionCheckerWhenIdeal() {
-        let cc = ConditionChecker(currentTemp:10);
-        let activity = Activity(title: "activity",
-                                conditions: [
-                                    Condition(name: "temp", ideal: 10, max: 20, min: 0)]);
-        let condition = activity.getCondition("temp");
-        let res = cc.checkTemp(condition);
-        XCTAssert(res == 10);
-    }
-    
-    func testConditionCheckerWhenGreaterThanIdeal() {
-        let cc = ConditionChecker(currentTemp:15);
-        let activity = Activity(title: "activity",
-                                conditions: [
-                                    Condition(name: "temp", ideal: 10, max: 20, min: 0)]);
-        let condition = activity.getCondition("temp");
-        let res = cc.checkTemp(condition);
-        XCTAssert(res == 5);
-        let cc1 = ConditionChecker(currentTemp:18);
-        let activity1 = Activity(title: "activity",
-                                conditions: [
-                                    Condition(name: "temp", ideal: 10, max: 20, min: 0)]);
-        let condition1 = activity1.getCondition("temp");
-        let res1 = cc1.checkTemp(condition1);
-        XCTAssert(res1 == 2);
-    }
-    
-    func testConditionCheckerWhenLessThanIdeal() {
-        let cc = ConditionChecker(currentTemp:5);
-        let activity = Activity(title: "activity",
-                                conditions: [
-                                    Condition(name: "temp", ideal: 10, max: 20, min: 0)]);
-        let condition = activity.getCondition("temp");
-        let res = cc.checkTemp(condition);
-        XCTAssert(res == 5);
-        let cc1 = ConditionChecker(currentTemp:2);
-        let activity1 = Activity(title: "activity",
-                                 conditions: [
-                                    Condition(name: "temp", ideal: 10, max: 20, min: 0)]);
-        let condition1 = activity1.getCondition("temp");
-        let res1 = cc1.checkTemp(condition1);
-        XCTAssert(res1 == 2);
-    }
-
-    
     func testActivityReturnsSingleCondition() {
         let activity = Activity(title: "activity",
                                 conditions: [
